@@ -1,0 +1,50 @@
+.social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .social__item:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+.social__link {
+  color: $color_white;
+
+  svg {
+    fill: currentColor;
+  }
+}
+
+@media (max-width: $tablet_width) {
+  .social {
+    .social__item:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: $mobile_width) {
+  .social {
+    .social__item:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  .social__link {
+    &--vk svg {
+      width: 32px;
+      height: 17px;
+    }
+
+    &--inst svg {
+      width: 27px;
+      height: 27px;
+    }
+
+    &--fb svg {
+      width: 14px;
+      height: 27px;
+    }
+  }
+}

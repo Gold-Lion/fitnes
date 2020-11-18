@@ -1,0 +1,161 @@
+.footer {
+  background-color: #030a1a; // $color
+  overflow: hidden;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1250px;
+  padding: 0 $padding_tablet;
+  margin: 0 auto;
+}
+
+.footer__callback {
+  padding: 60px 170px 68px 0;
+}
+
+.footer__contacts {
+  padding: 60px 0 40px 120px;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 40px 45px;
+  font-size: 14px;
+  color: $color_white;
+}
+
+.footer__logo {
+  margin-right: auto;
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0;
+  margin-left: 63px;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.footer__menu-link {
+  color: $color_white;
+  margin-right: 39px;
+  transition: all $transition_fn;
+
+  &:hover,
+  &:focus {
+    color: $hover_for_blue;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  .social__link {
+    transition: all $transition_fn;
+
+    &:hover,
+    &:focus {
+      color: $hover_for_blue;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: $tablet_width) {
+  .footer__top {
+    flex-direction: column;
+  }
+
+  .footer__callback,
+  .footer__contacts {
+    padding: 67px 118px 67px 88px;
+  }
+
+  .footer__contacts {
+    padding-bottom: 42px;
+  }
+
+  .footer__bottom {
+    padding: 43px 45px;
+  }
+
+  .footer__menu-list {
+    margin-left: 49px;
+  }
+
+  .footer__menu-link {
+    margin-right: 31px;
+  }
+}
+
+@media (max-width: $mobile_width) {
+  .footer__top {
+    padding: 0 $padding_mobile;
+  }
+
+  .footer__callback,
+  .footer__contacts {
+    padding: 67px 0;
+  }
+
+  .footer__callback {
+    padding-bottom: 69px;
+  }
+
+  .footer__contacts {
+    padding-bottom: 43px;
+  }
+
+  .footer__bottom {
+    flex-wrap: wrap;
+    max-width: 320px;
+    padding: 47px 15px;
+  }
+
+  .footer__menu-list {
+    justify-content: flex-start;
+    width: 100%;
+    margin: -22px 0 17px;
+
+    li:first-child {
+      margin-top: 39px;
+      margin-right: 75px;
+    }
+
+    li {
+      flex-direction: column;
+    }
+  }
+
+  .footer__menu-link {
+    margin: 0;
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+
+  .footer__social {
+    margin: 0;
+  }
+}

@@ -1,0 +1,21 @@
+.page__header {
+  margin-bottom: 159px;
+  padding-top: 27px;
+  padding-bottom: 51px;
+}
+
+@media (max-width: $tablet_width) {
+  .page__header {
+    margin-bottom: 96px;
+    padding-top: 37px;
+    padding-bottom: 82px;
+  }
+}
+
+@media (max-width: $mobile_width) {
+  .page__header {
+    margin-bottom: 67px;
+    padding-top: 17px;
+    padding-bottom: 78px;
+  }
+}

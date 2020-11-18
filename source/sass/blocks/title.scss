@@ -1,0 +1,21 @@
+.title {
+  font-family: $font_family_title;
+  font-size: 49px;
+  font-weight: $font_bold;
+  line-height: 63.7px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+@media (max-width: $tablet_width) {
+  .title {
+    font-size: 42px;
+    line-height: 1;
+  }
+}
+
+@media (max-width: $mobile_width) {
+  .title {
+    font-size: 32px;
+  }
+}

@@ -89,11 +89,11 @@ const scripts = () => {
     .pipe(dest(`build/js`));
 };
 
-// const jsLibs = () => {
-//   return src(`node_modules/imask/dist/imask.min.js`)
-//     .pipe(concat(`vendor.min.js`))
-//     .pipe(dest(`build/js`));
-// };
+const jsLibs = () => {
+  return src(`node_modules/swiper/js/swiper.min.js`)
+    .pipe(concat(`vendor.min.js`))
+    .pipe(dest(`build/js`));
+};
 
 const html = () => {
   return src(`source/*.html`)
@@ -126,10 +126,10 @@ exports.images = images;
 exports.webp = webp;
 exports.sprite = sprite;
 exports.scripts = scripts;
-// exports.jsLibs = jsLibs;
+exports.jsLibs = jsLibs;
 exports.html = html;
 exports.copy = copy;
 exports.clean = clean;
 
-exports.build = series(clean, copy, css, sprite, scripts, html);
+exports.build = series(clean, copy, css, sprite, jsLibs, scripts, html);
 exports.start = series(this.build, server);

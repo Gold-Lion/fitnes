@@ -1,0 +1,112 @@
+.header {
+  color: $color_white;
+  background-color: #b80027;
+  background-image: url("../img/header-bg-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+    background-image: url("../img/header-bg-desktop@2x.jpg");
+  }
+}
+
+.header__wrapper {
+  position: relative;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 $padding_tablet;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 113px;
+}
+
+.header__tel {
+  margin-left: auto;
+  font-family: $font_family_title;
+  font-size: 26px;
+  font-weight: $font_bold;
+  letter-spacing: 0.03em;
+  color: $color_white;
+  transition: all $transition_fn;
+
+  &:hover,
+  &:focus {
+    color: $hover_for_white;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header__social {
+  position: absolute;
+  right: 45px;
+  bottom: 40px;
+  text-align: right;
+
+  li:not(:last-child) {
+    margin-bottom: 11px;
+  }
+
+  a {
+    font-size: 12px;
+    color: currentColor;
+    text-transform: uppercase;
+    transition: all $transition_fn;
+
+    &:hover,
+    &:focus {
+      color: $color_red;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media (max-width: $tablet_width) {
+  .header {
+    background-image: url("../img/header-bg-tablet@1x.jpg");
+
+    @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+      background-image: url("../img/header-bg-tablet@2x.jpg");
+    }
+  }
+
+  .header__top {
+    margin-bottom: 74px;
+  }
+
+  .header__tel {
+    font-size: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  .header__social {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile_width) {
+  .header {
+    background-image: url("../img/header-bg-mobile@1x.jpg");
+
+    @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+      background-image: url("../img/header-bg-mobile@2x.jpg");
+    }
+  }
+
+  .header__wrapper {
+    padding: 0 $padding_mobile;
+  }
+
+  .header__tel {
+    font-size: 20px;
+  }
+}
