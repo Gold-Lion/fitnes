@@ -117,8 +117,8 @@
       margin-right: 0;
     }
 
-    &:nth-child(n + 2) {
-      margin-top: 20px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
   }
 }
@@ -139,7 +139,7 @@
 
   .reviews__slide {
     min-height: 335px;
-    padding: 47px 25px 36px;
+    padding: 47px 25px 34px;
   }
 
   .reviews__picture {
@@ -162,10 +162,20 @@
   }
 
   .reviews__author-comment {
+    line-height: 1.4;
     text-align: center;
+  }
+
+  .nojs .reviews__slider-list {
+    flex-direction: column;
   }
 
   .nojs .reviews__slide {
     max-width: 226px;
+    margin: 0 auto;
+
+    &:not(:nth-child(2n)) {
+      margin-right: auto;
+    }
   }
 }

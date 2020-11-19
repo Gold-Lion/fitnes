@@ -4,11 +4,12 @@
   justify-content: space-between;
   max-width: 1250px;
   margin: 0 auto;
-  margin-bottom: 339px;
+  margin-bottom: 231px;
   padding: 0 $padding_tablet;
 }
 
 .gym__info {
+  width: 100%;
   max-width: 355px;
   margin-left: 60px;
 }
@@ -46,7 +47,7 @@
 
 .gym__video {
   position: absolute;
-  top: 67.6%;
+  top: 68%;
   left: 38.6%;
   width: 364px;
   height: 228px;
@@ -115,7 +116,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 275px;
+    margin-bottom: 179px;
   }
 
   .gym__info {
@@ -161,7 +162,7 @@
 
 @media (max-width: $mobile_width) {
   .gym {
-    margin-bottom: 340px;
+    margin-bottom: 272px;
     padding: 0;
   }
 

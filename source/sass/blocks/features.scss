@@ -1,5 +1,7 @@
 .features {
-  margin-bottom: 225px;
+  margin-bottom: 109px;
+  padding: 110px 0;
+  background-color: #f8f9fc;
 }
 
 .features__wrapper {
@@ -25,8 +27,8 @@
 }
 
 .features__desc {
-  width: 57%;
   margin: 0;
+  margin-left: auto;
 
   h3 {
     margin: 6px 0 8px;
@@ -45,40 +47,83 @@
   width: 34%;
 
   &--area,
+  &--parking,
+  &--amenities,
+  &--experience {
+    .features__number {
+      height: 93px;
+      color: $color_text;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--area,
   &--parking {
-    margin-bottom: 78px;
+    margin-bottom: 72px;
   }
 
   &--area {
     padding-left: 27px;
+
+    .features__number {
+      width: 108px;
+      background-image: url("../img/features-area.svg");
+    }
+
+    .features__desc {
+      width: calc(100% - 138px);
+    }
   }
 
   &--parking {
     margin-left: auto;
     padding-left: 15px;
 
-    .features__desc {
-      width: 67%;
+    .features__number {
+      width: 72px;
+      background-image: url("../img/features-parking.svg");
     }
-  }
 
-  &--amenities,
-  &--experience {
-    padding-top: 69px;
-    border-top: 2px solid rgba($color_red_for_border, 0.2);
+    .features__desc {
+      width: calc(100% - 102px);
+      padding-right: 5px;
+    }
   }
 
   &--amenities {
     width: 33%;
+    padding-top: 69px;
     padding-left: 20px;
+    border-top: 2px solid rgba($color_red_for_border, 0.2);
+
+    .features__number {
+      width: 108px;
+      background-image: url("../img/features-amenities.svg");
+    }
+
+    .features__desc {
+      width: calc(100% - 138px);
+    }
   }
 
   &--experience {
     margin-left: auto;
-    padding-left: 18px;
+    padding-left: 14px;
+    padding-top: 69px;
+    border-top: 2px solid rgba($color_red_for_border, 0.2);
+
+    .features__number {
+      width: 70px;
+      background-image: url("../img/features-experience.svg");
+    }
 
     .features__desc {
-      width: 70%;
+      width: calc(100% - 104px);
+    }
+
+    h3 {
+      margin-bottom: 6px;
     }
   }
 
@@ -100,8 +145,10 @@
       margin: 0;
       margin-top: 32px;
       font-size: 74px;
-      background: currentColor;
-      -webkit-background-clip: text;
+      font-weight: $font_bold;
+      line-height: 1;
+      color: $color_white;
+      background-image: none;
     }
 
     .features__desc {
@@ -119,27 +166,10 @@
   }
 }
 
-.features__number {
-  display: flex;
-  flex-direction: column;
-  margin-right: 30px;
-  font-size: 71px;
-  font-weight: $font_bold;
-  line-height: 1;
-  background-image: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  sub {
-    font-size: 14px;
-    font-weight: $font_regular;
-    color: #2e35ac;
-  }
-}
-
 @media (max-width: $tablet_width) {
   .features {
-    margin-bottom: 190px;
+    padding: 98px 0 87px;
+    margin-bottom: 96px;
   }
 
   .features__title {
@@ -158,18 +188,65 @@
     padding: 0;
 
     &--area,
+    &--parking,
+    &--amenities,
+    &--experience {
+      .features__number {
+        height: 86px;
+      }
+    }
+
+    &--area,
     &--parking {
-      margin-bottom: 324px;
+      margin-bottom: 317px;
+    }
+
+    &--area {
+      .features__number {
+        width: 89px;
+        background-image: url("../img/features-area-tablet.svg");
+      }
+
+      .features__desc {
+        width: calc(100% - 118px);
+      }
     }
 
     &--parking {
+      .features__number {
+        width: 59px;
+        background-image: url("../img/features-parking-tablet.svg");
+      }
+
       .features__desc {
-        width: 71%;
+        width: calc(100% - 88px);
+      }
+    }
+
+    &--amenities {
+      .features__number {
+        width: 89px;
+        background-image: url("../img/features-amenities-tablet.svg");
+      }
+
+      .features__desc {
+        width: calc(100% - 118px);
+      }
+    }
+
+    &--experience {
+      .features__number {
+        width: 57px;
+        background-image: url("../img/features-experience-tablet.svg");
+      }
+
+      .features__desc {
+        width: calc(100% - 90px);
       }
     }
 
     &--equipment {
-      top: 26%;
+      top: 25.7%;
       width: 100%;
       max-width: 443px;
       min-height: auto;
@@ -200,15 +277,12 @@
       }
     }
   }
-
-  .features__number {
-    font-size: 58px;
-  }
 }
 
 @media (max-width: $mobile_width) {
   .features {
-    margin-bottom: 132px;
+    padding: 66px 0;
+    margin-bottom: 67px;
   }
 
   .features__wrapper {
@@ -225,15 +299,58 @@
     width: 100%;
     text-align: center;
 
+    &--area,
+    &--parking,
+    &--amenities,
+    &--experience {
+      .features__number {
+        height: 77px;
+        margin: 0;
+      }
+
+      .features__desc {
+        width: 73%;
+        margin: 0 auto;
+      }
+    }
+
     &--area {
-      margin-bottom: 33px;
+      margin-bottom: 37px;
+
+      .features__number {
+        width: 89px;
+        background-image: url("../img/features-area-mobile.svg");
+      }
     }
 
     &--parking {
-      margin-bottom: 44px;
+      margin-bottom: 46px;
 
       .features__number {
-        margin-bottom: 6px;
+        width: 59px;
+        background-image: url("../img/features-parking-mobile.svg");
+      }
+    }
+
+    &--amenities {
+      margin-bottom: 37px;
+
+      .features__number {
+        width: 89px;
+        background-image: url("../img/features-amenities-mobile.svg");
+      }
+
+      .features__desc {
+        width: 70%;
+        margin-top: 5px;
+      }
+    }
+
+    &--experience {
+      .features__number {
+        width: 57px;
+        margin-bottom: 2px;
+        background-image: url("../img/features-experience-mobile.svg");
       }
     }
 
@@ -251,28 +368,5 @@
         padding: 0;
       }
     }
-
-    &--amenities {
-      margin-bottom: 33px;
-
-      .features__number {
-        margin-bottom: 10px;
-      }
-    }
-
-    &--experience {
-      .features__number {
-        margin-bottom: 9px;
-      }
-
-      .features__desc {
-        width: 72%;
-      }
-    }
-  }
-
-  .features__number {
-    margin: 0;
-    margin-bottom: 6px;
   }
 }

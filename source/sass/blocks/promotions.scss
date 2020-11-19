@@ -45,6 +45,7 @@
   }
 
   p {
+    width: 100%;
     margin: 0;
     font-size: 16px;
   }
@@ -162,7 +163,7 @@
 
 @media (max-width: $mobile_width) {
   .promotions {
-    margin-bottom: 38px;
+    margin-bottom: 37px;
     padding: 0 15px;
   }
 
