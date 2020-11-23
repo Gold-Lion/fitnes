@@ -1,7 +1,6 @@
 'use strict';
 
 (function () {
-  // var seasonTicketsTabs = Array.from(document.querySelector('.season-tickets__tabs').children);
   var seasonTicketsTabs = document.querySelector('.season-tickets__tabs').children;
   var seasonTicketsContents = document.querySelectorAll('.season-tickets__content');
 
