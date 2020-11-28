@@ -33,13 +33,13 @@
 
 .banner__desc {
   position: absolute;
-  top: 50%;
+  top: 42.5%;
   left: 0;
   max-width: 134px;
+  height: 100%;
   margin: 0;
   font-size: 14px;
   line-height: 21px;
-  transform: translateY(-50%);
 }
 
 .banner__img {
@@ -67,6 +67,8 @@
 @media (max-width: $tablet_width) {
   .banner {
     justify-content: space-between;
+    max-width: 750px;
+    margin: 0 auto;
   }
 
   .banner__info {
@@ -86,8 +88,8 @@
   }
 
   .banner__desc {
+    top: 38.5%;
     max-width: 113px;
-    transform: translateY(-59%);
   }
 
   .banner__img {
@@ -102,6 +104,10 @@
 }
 
 @media (max-width: $mobile_width) {
+  .banner {
+    max-width: 350px;
+  }
+
   .banner__info {
     display: flex;
     flex-direction: column;
@@ -124,7 +130,7 @@
   }
 
   .banner__desc {
-    transform: translateY(-48%);
+    top: 40.5%;
   }
 
   .banner__img {

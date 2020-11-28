@@ -8,9 +8,9 @@
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
+    right: -100%;
+    left: -100%;
     z-index: -10;
-    width: 100vw;
     height: 100%;
     background-color: currentColor;
   }
@@ -69,11 +69,8 @@
 @media (max-width: $tablet_width) {
   .callback {
     width: 100%;
-
-    &::before {
-      right: -$padding_tablet;
-      left: -$padding_tablet;
-    }
+    max-width: 678px;
+    margin: 0 auto;
 
     input {
       width: 43.7%;
@@ -92,10 +89,7 @@
 
 @media (max-width: $mobile_width) {
   .callback {
-    &::before {
-      right: -$padding_mobile;
-      left: -$padding_mobile;
-    }
+    max-width: 350px;
 
     input {
       width: 100%;

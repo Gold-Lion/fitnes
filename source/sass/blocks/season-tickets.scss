@@ -187,7 +187,7 @@
 @media (max-width: $tablet_width) {
   .season-tickets {
     padding-top: 97px;
-    margin-bottom: 100px;
+    margin-bottom: 101px;
   }
 
   .season-tickets__wrapper {
@@ -202,9 +202,13 @@
     }
   }
 
+  .season-tickets__title {
+    margin-bottom: 32px;
+  }
+
   .season-tickets__tabs {
     max-width: 331px;
-    margin-bottom: 44px;
+    margin-bottom: 42px;
   }
 
   .season-tickets__tab {

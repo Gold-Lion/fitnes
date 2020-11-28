@@ -85,10 +85,13 @@
 @media (max-width: $tablet_width) {
   .contacts {
     width: 100%;
+    max-width: 678px;
+    margin: 0 auto;
 
     &::before {
-      right: -$padding_tablet;
-      left: -$padding_tablet;
+      width: auto;
+      right: -100%;
+      left: -100%;
     }
   }
 
@@ -123,10 +126,7 @@
 
 @media (max-width: $mobile_width) {
   .contacts {
-    &::before {
-      right: -$padding_mobile;
-      left: -$padding_mobile;
-    }
+    max-width: 350px;
   }
 
   .contacts__list {
